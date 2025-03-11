@@ -22,7 +22,7 @@
 
 3. 🔋 [Features](#features)
 
-4. 🤸 [Installation](#installation)
+4. 🔧 [Installation](#installation)
 
 ## <a name="introduction">🤖 Introduction</a>
 
