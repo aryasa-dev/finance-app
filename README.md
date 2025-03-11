@@ -1,5 +1,3 @@
-# Simple Finance App
-
 <div align="center">
   <div>
     <img src="https://img.shields.io/badge/-Laravel-black?style=for-the-badge&logoColor=white&logo=laravel&color=000020" alt="Laravel" />
@@ -12,124 +10,83 @@
   <h3 align="center">Simple Finance App</h3>
 
   <div align="center">
-    Build with <b>Laravel</b> & <b>Vue js</b> with <b>Inertia js</b>
+    Build with <b>Laravel</b> & <b>Inertia js</b> using <b>Vue js</b>
   </div>
 </div>
 
-## 📌 About
+## 📋 <a name="table">Table of Contents</a>
 
-Simple Finance App built with Laravel & Vue js with Inertia js
+1. 🤖 [Introduction](#introduction)
 
-## 🛠️ Technologies
+2. ⚙️ [Tech Stack](#tech-stack)
 
--   **Laravel**
--   **Inertia.js**
--   **Vue.js**
--   **Tailwind CSS**
--   **Shadcn-Vue**
+3. 🔋 [Features](#features)
 
-## 🔧 Instalasi
+4. 🤸 [Installation](#installation)
 
-1. **Clone repository ini**
+## <a name="introduction">🤖 Introduction</a>
+
+This project is a web application built with Laravel (PHP framework) and Inertia.js, using Vue.js for the frontend
+Inertia.js allows seamless integration between Laravel and Vue.js without requiring a separate API.
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+- Laravel
+
+- Inertia js
+
+- Vue js
+
+- Tailwind CSS
+
+- Shadcn-vue
+
+## <a name="features">🔋 Features</a>
+
+👉 **Authentication**: Laravel Breeze with Inertia js
+
+👉 **CRUD transaction data**: Create, Edit, and Delete data
+
+👉 **Sorting & Pagination**: Sorting and Pagination data
+
+(etc)
+
+and many more, including code architecture and reusability.
+
+## <a name="installation">🔧 Installation</a>
+
+1. **Clone this repository**
 
     ```sh
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/aryasa-dev/finance-app.git
     cd repository
     ```
 
-2. **Instal dependensi Laravel**
+2. **Installation Laravel dependency**
 
     ```sh
     composer install
     ```
 
-3. **Instal dependensi frontend**
+3. **Installation frontend dependency**
 
     ```sh
     npm install
     ```
 
-4. **Buat file `.env` dan konfigurasikan database**
-
-    ```sh
-    cp .env.example .env
-    php artisan key:generate
-    ```
-
-    Sesuaikan pengaturan database di file `.env`.
-
-5. **Jalankan migrasi database**
+4. **Database migration**
 
     ```sh
     php artisan migrate --seed
     ```
 
-6. **Jalankan server Laravel**
+6. **Run server**
 
     ```sh
     php artisan serve
     ```
 
-7. **Jalankan Vite untuk frontend**
+7. **Run Vite for frontend**
     ```sh
     npm run dev
     ```
-
-## 🚀 Fitur
-
-✅ **Autentikasi pengguna** (Laravel Breeze dengan Inertia.js)  
-✅ **CRUD data transaksi**  
-✅ **Sorting & Pagination dengan Inertia.js**  
-✅ **Flash messages setelah aksi sukses/gagal**
-
-## 📌 Contoh Routing di Laravel
-
-```php
-use Inertia\Inertia;
-use App\Http\Controllers\TransactionController;
-
-Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
-```
-
-## 📌 Contoh Komponen Vue.js dengan Inertia
-
-```vue
-<template>
-    <div>
-        <h1 class="text-xl font-bold">Daftar Transaksi</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th @click="sort('transaction_date')">Tanggal</th>
-                    <th @click="sort('amount')">Jumlah</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="transaction in transactions" :key="transaction.id">
-                    <td>{{ transaction.transaction_date }}</td>
-                    <td>{{ transaction.amount }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</template>
-
-<script>
-export default {
-    props: {
-        transactions: Array,
-    },
-    methods: {
-        sort(field) {
-            this.$inertia.get(this.route("transactions.index"), {
-                sort_field: field,
-            });
-        },
-    },
-};
-</script>
-```
-
-## 📄 Lisensi
-
-Proyek ini menggunakan lisensi **MIT**.
